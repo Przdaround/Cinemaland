@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingVertical="16dp"
+        android:background="#e0ddd1">
+
+
+
+
+
+
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CINEMALAND"
+            android:textSize="36sp"
+            android:textColor="#334d46"
+            android:textStyle="bold"
+            android:layout_margin="8dp"
+            android:layout_gravity="center"/>
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:src="@mipmap/TheGreenMile2"
+        android:layout_margin="8dp"
+        android:layout_gravity="center" />
+
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="The Green Mile"
+        android:textSize="24sp"
+        android:textColor="#334d46"
+        android:textStyle="bold"
+        android:layout_margin="8dp"
+        android:layout_gravity="center"/>
+
+
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Details"
+        android:textSize="18sp"
+        android:backgroundTint="#678a5c"
+        android:layout_margin="8dp"
+        android:layout_gravity="center"/>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:src="@mipmap/BreakingBad"
+        android:layout_margin="8dp"
+        android:layout_gravity="center" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Breaking Bad"
+        android:textSize="24sp"
+        android:textColor="#334d46"
+        android:textStyle="bold"
+        android:layout_margin="8dp"
+        android:layout_gravity="center"/>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Details"
+        android:textSize="18sp"
+        android:backgroundTint="#678a5c"
+        android:layout_margin="8dp"
+        android:layout_gravity="center"/>
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:src="@mipmap/ShutterIsland"
+        android:layout_margin="8dp"
+        android:layout_gravity="center" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Shutter Island"
+        android:textSize="24sp"
+        android:textColor="#334d46"
+        android:textStyle="bold"
+        android:layout_margin="8dp"
+        android:layout_gravity="center"/>
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Details"
+        android:textSize="18sp"
+        android:backgroundTint="#678a5c"
+        android:layout_margin="8dp"
+        android:layout_gravity="center"/>
+
+</LinearLayout>
+
+</ScrollView>
