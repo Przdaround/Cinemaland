@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Cinemaland</string>
+    <string name="cinemaland">CINEMALAND</string>
+    <string name="the_green_mile">The Green Mile</string>
+    <string name="dsc_the_green_mile">The lives of guards on Death Row are affected by one of their charges: a black man accused of child murder and rape, yet who has a mysterious gift.</string>
+    <string name="grn">grn</string>
+    <string name="details">Details</string>
+    <string name="bb">bb</string>
+    <string name="breaking_bad">Breaking Bad</string>
+    <string name="si">SI</string>
+    <string name="shutter_island">Shutter Island</string>
 </resources>
