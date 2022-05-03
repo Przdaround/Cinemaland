@@ -12,9 +12,9 @@ class DetailsActivity : AppCompatActivity() {
         val movie = intent.getSerializableExtra("movie") as Movie
 
         val nameView = findViewById<TextView>(R.id.name)
-        nameView.text = movie.name
+        nameView.text = getString(movie.name)
 
         val descriptionView = findViewById<TextView>(R.id.description)
-        descriptionView.text = movie.description
+        descriptionView.text = getString(movie.description)
     }
 }
