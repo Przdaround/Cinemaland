@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<string name="the_green_mile">Зеленая миля</string>
+<string name="dsc_the_green_mile">На жизнь охранников в камере смертников влияет одно из их обвинений: темнокожий мужчина, обвиняемый в убийстве детей и изнасиловании, но обладающий таинственным даром.</string>
+<string name="grn">grn</string>
+<string name="details">Детали</string>
+<string name="bb">bb</string>
+<string name="breaking_bad">Во все тяжкие</string>
+<string name="dsc_breaking_bad">Учитель химии средней школы, у которого диагностирован неоперабельный рак легких, начинает производство и продажу метамфетамина, чтобы обеспечить будущее своей семьи. </string>
+<string name="si">SI</string>
+<string name="shutter_island">Остров проклятых</string>
+<string name="dsc_shutter_island">В 1954 году маршал США расследует исчезновение убийцы, сбежавшего из больницы для душевнобольных преступников.</string>
+<string name="share">Поделиться</string>
+
+</resources>

@@ -47,6 +47,85 @@ tools:context=".MainActivity">
             android:layout_gravity="center"/>
 
 
+        <ImageView
+            android:id="@+id/imageView_breaking_bad"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:src="@drawable/breaking_bad"
+            android:layout_margin="8dp"
+            android:layout_gravity="center"
+            android:contentDescription="@string/the_green_mile" />
+
+        <TextView
+            android:id="@id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/breaking_bad"
+            android:textSize="24sp"
+            android:textColor="#334d46"
+            android:textStyle="bold"
+            android:layout_margin="8dp"
+            android:layout_gravity="center"/>
+
+
+        <TextView
+            android:id="@id/description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dsc_breaking_bad"
+            android:textSize="16sp"
+            android:textColor="#334d46"
+            android:textStyle="normal"
+            android:layout_margin="8dp"
+            android:layout_gravity="center"/>
+
+
+        <Button
+            android:id="@+id/btn_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/share"
+            android:textSize="18sp"
+            android:backgroundTint="#678a5c"
+            android:layout_margin="8dp"
+            android:layout_gravity="center"/>
+
+
+
+        <ImageView
+            android:id="@+id/imageView_Shutter_island"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:src="@drawable/shutter_island"
+            android:layout_margin="8dp"
+            android:layout_gravity="center"
+            android:contentDescription="@string/the_green_mile" />
+
+        <TextView
+            android:id="@id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/shutter_island"
+            android:textSize="24sp"
+            android:textColor="#334d46"
+            android:textStyle="bold"
+            android:layout_margin="8dp"
+            android:layout_gravity="center"/>
+
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dsc_shutter_island"
+            android:textSize="16sp"
+            android:textColor="#334d46"
+            android:textStyle="normal"
+            android:layout_margin="8dp"
+            android:layout_gravity="center"/>
+
+
+
 
     </LinearLayout>
 

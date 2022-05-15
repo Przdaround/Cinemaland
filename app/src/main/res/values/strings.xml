@@ -7,6 +7,9 @@
     <string name="details">Details</string>
     <string name="bb">bb</string>
     <string name="breaking_bad">Breaking Bad</string>
+    <string name="dsc_breaking_bad">A high school chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing and selling methamphetamine in order to secure his family future. </string>
     <string name="si">SI</string>
     <string name="shutter_island">Shutter Island</string>
+    <string name="dsc_shutter_island">In 1954, a U.S. Marshal investigates the disappearance of a murderer who escaped from a hospital for the criminally insane.</string>
+    <string name="share">Share</string>
 </resources>
