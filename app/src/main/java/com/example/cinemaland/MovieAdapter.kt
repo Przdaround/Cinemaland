@@ -2,49 +2,35 @@ package com.example.cinemaland
 
 import android.util.Log
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-private const val TAG = "MovieAdapter"
-private const val HEADER_VIEW_TYPE = 0
-private const val ITEM_VIEW_TYPE = 1
 
-class MovieAdapter(
-    private val movie: List<Movie>,
-    private val listener: NewsClickListener
-) :
-    RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class MovieAdapter: RecyclerView.Adapter<MovieAdapter.MovieViewHolder2>() {
+   private val movielist = ArrayList<Movie>()
+    class MovieViewHolder2(item: View): RecyclerView.ViewHolder(item) {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-        Log.d(TAG, "onCreateViewHolder: $viewType")
 
-        val inflater = LayoutInflater.from(parent.context)
-        return when (viewType) {
-            HEADER_VIEW_TYPE -> HeaderItemViewHolder(
-                inflater.inflate(R.layout.item_header_news, parent, false)
-            )
-            else -> MovieViewHolder(inflater.inflate(R.layout.item_news, parent, false))
-        }
     }
 
-    override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-        Log.d(TAG, "onBindViewHolder: $position")
-
-        when (holder) {
-            is MovieViewHolder -> {
-                holder.bind(items[position - 1], listener) // -1 -> header
-            }
-        }
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MovieViewHolder2 {
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.movie_news, parent, false)
+        return MovieViewHolder2(view)
     }
 
-    override fun getItemCount(): Int = items.size + 1 // +1 -> header
-
-    override fun getItemViewType(position: Int): Int {
-        return if (position == 0) HEADER_VIEW_TYPE else ITEM_VIEW_TYPE
+    override fun onBindViewHolder(holder: MovieViewHolder2, position: Int) {
+        holder.bind(movielist[position])
     }
 
-    interface NewsClickListener {
-        fun onNewsClick(newsItem: NewsItem, position: Int)
-        fun onFavoriteClick(newsItem: NewsItem, position: Int)
+    override fun getItemCount(): Int {
+        return movielist.size
+    }
+
+    fun addPlant(movie: Movie){
+        movielist.add(movie)
+        notifyDataSetChanged()
     }
 }

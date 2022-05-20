@@ -10,27 +10,27 @@ class MovieViewHolder2(itemView: View) : RecyclerView.ViewHolder(itemView) {
     private val nameTv: TextView = itemView.findViewById(R.id.name)
     private val descriptionTv: TextView = itemView.findViewById(R.id.description)
     private val imageIv: ImageView = itemView.findViewById(androidx.appcompat.R.id.image)
+    private val likeIv: ImageView = itemView.findViewById(R.id.like)
 
-    fun bind(item: Movie, listener: NewsItemAdapter.NewsClickListener) {
-        nameTv.text = item.name
-        descriptionTv.text = item.description
-        if (item.image == Color.BLUE) {
-            nameTv.setTextColor(Color.GREEN)
-        } else {
-            nameTv.setTextColor(Color.GRAY)
-        }
-        imageIv.setBackgroundColor(item.image)
-        imageIv.setOnClickListener {
+    fun bind(item: Movie, listener: MovieAdapter.MovieClickListener) {
+        nameTv.text = itemView.context.getString(item.name)
+        descriptionTv.text = itemView.context.getString(item.description)
+
+
+        likeIv.setBackgroundColor(item.like)
+        likeIv.setOnClickListener {
             listener.onFavoriteClick(
                 item,
                 adapterPosition - 1
             )
         } // -1 -> header
-        itemView.setOnClickListener {
+        imageIv.setOnClickListener {
             listener.onNewsClick(
-                item, // -1 -> header
+                item,
+                         // -1 -> header
                 adapterPosition - 1 // -1 -> header
             )
         }
     }
 }
+

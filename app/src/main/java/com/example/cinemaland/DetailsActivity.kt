@@ -12,7 +12,7 @@ class DetailsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_details)
 
-        val movie = intent.getSerializableExtra("movie") as Movie
+        val movie = intent.getSerializableExtra("MOVIE_KEY") as Movie
 
         val nameView = findViewById<TextView>(R.id.name)
         nameView.text = getString(movie.name)

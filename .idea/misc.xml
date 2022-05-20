@@ -5,11 +5,16 @@
       <map>
         <entry key="..\:/Users/prazd/AndroidStudioProjects/Cinemaland/app/src/main/res/drawable/BreakingBad_background.xml" value="0.188" />
         <entry key="..\:/Users/prazd/AndroidStudioProjects/Cinemaland/app/src/main/res/drawable/Breakingbad_background.xml" value="0.264" />
-        <entry key="..\:/Users/prazd/AndroidStudioProjects/Cinemaland/app/src/main/res/layout/activity_details.xml" value="0.18385416666666668" />
+        <entry key="..\:/Users/prazd/AndroidStudioProjects/Cinemaland/app/src/main/res/layout/activity_details.xml" value="0.5" />
         <entry key="..\:/Users/prazd/AndroidStudioProjects/Cinemaland/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/prazd/AndroidStudioProjects/Cinemaland/app/src/main/res/layout/activity_movie_view_holder2.xml" value="0.34479166666666666" />
+        <entry key="..\:/Users/prazd/AndroidStudioProjects/Cinemaland/app/src/main/res/layout/headermovie.xml" value="0.34479166666666666" />
+        <entry key="..\:/Users/prazd/AndroidStudioProjects/Cinemaland/app/src/main/res/layout/movie_news.xml" value="0.25" />
+        <entry key="..\:/Users/prazd/AndroidStudioProjects/Cinemaland/app/src/main/res/layout/muv.xml" value="0.23697916666666666" />
         <entry key="..\:/Users/prazd/AndroidStudioProjects/Cinemaland/app/src/main/res/mipmap-anydpi-v26/Breakingbad2.xml" value="0.1935" />
         <entry key="..\:/Users/prazd/AndroidStudioProjects/Cinemaland/app/src/main/res/mipmap-anydpi-v26/Mad_max.xml" value="0.2125" />
         <entry key="..\:/Users/prazd/AndroidStudioProjects/Cinemaland/app/src/main/res/mipmap-anydpi-v26/breaking_bad_round.xml" value="0.188" />
+        <entry key="..\:/Users/prazd/AndroidStudioProjects/Cinemaland/app/src/main/res/mipmap-anydpi-v26/heart.xml" value="0.2125" />
         <entry key="..\:/Users/prazd/AndroidStudioProjects/Cinemaland/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1935" />
       </map>
     </option>

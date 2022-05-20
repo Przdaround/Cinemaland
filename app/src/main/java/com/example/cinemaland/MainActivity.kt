@@ -3,27 +3,38 @@ package com.example.cinemaland
 
 
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.DividerItemDecoration
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+
 
 class MainActivity : AppCompatActivity() {
 
-   // private val recyclerView by lazy { findViewById<RecyclerView>(R.id.recycler) }
+   private val recyclerView by lazy { findViewById<RecyclerView>(R.id.recycler) }
    object Movies {
-    val movielist = mutableListOf(
-        Movie(R.string.the_green_mile, R.string.dsc_the_green_mile, R.drawable.green_mile, false),
-        Movie(R.string.breaking_bad, R.string.dsc_breaking_bad, R.drawable.breaking_bad, false),
-        Movie(R.string.shutter_island, R.string.dsc_shutter_island, R.drawable.shutter_island, false)
+     val movielist = mutableListOf(
+        Movie(R.string.the_green_mile, R.string.dsc_the_green_mile, R.drawable.green_mile, R.drawable.heart,false),
+        Movie(R.string.breaking_bad, R.string.dsc_breaking_bad, R.drawable.breaking_bad, R.drawable.heart,false),
+        Movie(R.string.shutter_island, R.string.dsc_shutter_island, R.drawable.shutter_island, R.drawable.heart,false),
+        Movie(R.string.days_later, R.string.dsc_days_later, R.drawable.days_later, R.drawable.heart,false),
+        Movie(R.string.inception, R.string.dsc_inception, R.drawable.inception, R.drawable.heart,false),
+        Movie(R.string.mad_max, R.string.dsc_mad_max, R.drawable.mad_max, R.drawable.heart,false),
+        Movie(R.string.memento, R.string.dsc_memento, R.drawable.memento, R.drawable.heart,false),
+        Movie(R.string.the_imitation_game, R.string.dsc_the_imitation_game, R.drawable.the_imitation_game, R.drawable.heart,false)
+
+
     )
 
        // NewsItem("Title 2", "Subtitle 2", Color.YELLOW),
-       // NewsItem("Title 3", "Subtitle 3", Color.GRAY),
-       // NewsItem("Title 1", "Subtitle 1", Color.BLUE),
-        //NewsItem("Title 2", "Subtitle 2", Color.YELLOW),
-       // NewsItem("Title 3", "Subtitle 3", Color.GRAY)
 
    }
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,8 +43,10 @@ class MainActivity : AppCompatActivity() {
 
 
 
-        val btnGreenMile = findViewById<Button>(R.id.btn_green_mile)
-        val textGreenMile = findViewById<TextView>(R.id.textView_green_mile)
+
+
+        val btnGreenMile = findViewById<Button>(R.id.btn)
+        val textGreenMile = findViewById<TextView>(R.id.name)
         if (Movies.movielist[0].selected) {
             textGreenMile.setTextColor(ContextCompat.getColor(this, R.color.teal_200))
         }
@@ -43,45 +56,39 @@ class MainActivity : AppCompatActivity() {
 
             val intent = Intent(this, DetailsActivity::class.java)
 
-            intent.putExtra(R.string.the_green_mile, Movies.movielist[0])
+            intent.putExtra("MOVIE_KEY", Movies.movielist[0])
             startActivity(intent)
         }
 
+        initRecycler()
+        initClickListeners()
+    }
 
-        val btnBreakingBad = findViewById<Button>(R.id.btn_breaking_bad)
-        val textBreakingBad = findViewById<TextView>(R.id.textView_breaking_bad)
-        if (Movies.movielist[0].selected) {
-            textBreakingBad.setTextColor(ContextCompat.getColor(this, R.color.teal_200))
+    private fun initClickListeners() {
+        findViewById<View>(R.id.like).setOnClickListener {
+            recyclerView.adapter?.notifyItemInserted(2 + 1)// +1 -> header
         }
-        btnBreakingBad.setOnClickListener {
-            textBreakingBad.setTextColor(ContextCompat.getColor(this, R.color.teal_200))
-            Movies.movielist[0].selected = true
-
-            val intent = Intent(this, DetailsActivity::class.java)
-
-            intent.putExtra(R.string.breaking_bad, Movies.movielist[0])
-            startActivity(intent)
+        findViewById<View>(R.id.btn).setOnClickListener {
+            recyclerView.adapter?.notifyItemRemoved(2 + 1)// +1 -> header
         }
+    }
 
-        val btnshutterisland = findViewById<Button>(R.id.btn_shutter_island)
-        val textShutterisland = findViewById<TextView>(R.id.textView_shutter_island)
-        if (Movies.movielist[0].selected) {
-            textShutterisland.setTextColor(ContextCompat.getColor(this, R.color.teal_200))
-        }
-        btnshutterisland.setOnClickListener {
-            textShutterisland.setTextColor(ContextCompat.getColor(this, R.color.teal_200))
-            Movies.movielist[0].selected = true
+    private fun initRecycler() {
+        val layoutManager = LinearLayoutManager(this)
+        recyclerView.layoutManager = layoutManager
+        recyclerView.adapter = MovieAdapter( Movie, object : MovieAdapter.MovieClickListener {
 
-            val intent = Intent(this, DetailsActivity::class.java)
+        })
 
-            intent.putExtra(R.string.shutter_island, Movies.movielist[0])
-            startActivity(intent)
-        }
+
+
             }
 
 
 
         }
+
+
 
 //private fun Intent.putExtra(name: String, movie: Movie) {
 

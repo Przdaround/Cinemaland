@@ -1,7 +1,17 @@
 <resources>
-    <string name="app_name">Cinemaland</string>
-    <string name="cinemaland">CINEMALAND</string>
+    <string name="app_name" translatable="false">Cinemaland</string>
+    <string name="cinemaland" translatable="false">CINEMALAND</string>
     <string name="the_green_mile">The Green Mile</string>
+    <string name="days_later" translatable="false">28 days later</string>
+    <string name="dsc_days_later" translatable="false">Four weeks after a mysterious, incurable virus spreads throughout the UK, a handful of survivors try to find sanctuary.</string>
+    <string name="inception" translatable="false">Inception</string>
+    <string name="dsc_inception" translatable="false">A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may doom the project and his team to disaster.</string>
+    <string name="mad_max" translatable="false">Mad Max: Fury road.</string>
+    <string name="dsc_mad_max" translatable="false">In a post-apocalyptic wasteland, a woman rebels against a tyrannical ruler in search for her homeland with the aid of a group of female prisoners, a psychotic worshiper, and a drifter named Max.</string>
+    <string name="memento" translatable="false">Memento</string>
+    <string name="dsc_memento" translatable="false">A man with short-term memory loss attempts to track down his wife/s murderer.</string>
+    <string name="the_imitation_game" translatable="false">The imitation game</string>
+    <string name="dsc_the_imitation_game" translatable="false">During World War II, the English mathematical genius Alan Turing tries to crack the German Enigma code with help from fellow mathematicians while attempting to come to terms with his troubled private life.</string>
     <string name="dsc_the_green_mile">The lives of guards on Death Row are affected by one of their charges: a black man accused of child murder and rape, yet who has a mysterious gift.</string>
     <string name="grn">grn</string>
     <string name="details">Details</string>
