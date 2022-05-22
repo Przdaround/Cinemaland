@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 
 class MovieAdapter: RecyclerView.Adapter<MovieAdapter.MovieViewHolder2>() {
    private val movielist = ArrayList<Movie>()
+    private val listener = MovieClickListener
     class MovieViewHolder2(item: View): RecyclerView.ViewHolder(item) {
 
 
@@ -29,8 +30,12 @@ class MovieAdapter: RecyclerView.Adapter<MovieAdapter.MovieViewHolder2>() {
         return movielist.size
     }
 
-    fun addPlant(movie: Movie){
+    fun addMovie(movie: Movie){
         movielist.add(movie)
         notifyDataSetChanged()
+    }
+    interface MovieClickListener {
+        fun onNewsClick(newsItem: Movie, position: Int)
+        fun onFavoriteClick(newsItem: Movie, position: Int)
     }
 }

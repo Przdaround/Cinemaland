@@ -15,13 +15,15 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.cinemaland.MainActivity.Movies.movielist
 
 
 class MainActivity : AppCompatActivity() {
+    private val adapter = MovieAdapter()
 
    private val recyclerView by lazy { findViewById<RecyclerView>(R.id.recycler) }
    object Movies {
-     val movielist = mutableListOf(
+      val movielist = mutableListOf(
         Movie(R.string.the_green_mile, R.string.dsc_the_green_mile, R.drawable.green_mile, R.drawable.heart,false),
         Movie(R.string.breaking_bad, R.string.dsc_breaking_bad, R.drawable.breaking_bad, R.drawable.heart,false),
         Movie(R.string.shutter_island, R.string.dsc_shutter_island, R.drawable.shutter_island, R.drawable.heart,false),
@@ -61,32 +63,47 @@ class MainActivity : AppCompatActivity() {
         }
 
         initRecycler()
-        initClickListeners()
+
     }
 
-    private fun initClickListeners() {
-        findViewById<View>(R.id.like).setOnClickListener {
-            recyclerView.adapter?.notifyItemInserted(2 + 1)// +1 -> header
-        }
-        findViewById<View>(R.id.btn).setOnClickListener {
-            recyclerView.adapter?.notifyItemRemoved(2 + 1)// +1 -> header
-        }
-    }
+
+
 
     private fun initRecycler() {
         val layoutManager = LinearLayoutManager(this)
         recyclerView.layoutManager = layoutManager
-        recyclerView.adapter = MovieAdapter( Movie, object : MovieAdapter.MovieClickListener {
+        recyclerView.adapter = MovieAdapter(movielist, object : MovieAdapter.MovieClickListener {
+            override fun onNewsClick(movie: Movie , position: Int) {
+                Toast.makeText(this@MainActivity, "News Click", Toast.LENGTH_SHORT).show()
+            }
 
+            override fun onFavoriteClick(Movie: Movie, position: Int) {
+                Toast.makeText(this@MainActivity, "Favorite Click", Toast.LENGTH_SHORT).show()
+            }
         })
+
+        recyclerView.addOnScrollListener(object : RecyclerView.OnScrollListener() {
+            override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
+                if (layoutManager.findLastVisibleItemPosition() >= movielist.size - 5) {
+                    repeat(10) {
+                        movielist.add(Movie(R.string.the_green_mile, R.string.dsc_the_green_mile, R.drawable.green_mile, R.drawable.heart,false))
+                    }
+                    recyclerView.adapter?.notifyItemRangeInserted(
+                        movielist.size + 1,
+                        10)
+
+
 
 
 
             }
+    }
 
 
 
-        }
+        })
+    }
+}
 
 
 
