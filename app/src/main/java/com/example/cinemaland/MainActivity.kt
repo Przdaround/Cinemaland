@@ -9,6 +9,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.DiffUtil
@@ -103,6 +104,23 @@ class MainActivity : AppCompatActivity() {
 
         })
     }
+    override fun onBackPressed() {
+        AlertDialog.Builder(this).apply {
+            setTitle("Подтверждение")
+            setMessage("Вы уверены, что хотите выйти из программы?")
+
+            setPositiveButton("Таки да") { _, _ ->
+                super.onBackPressed()
+            }
+
+            setNegativeButton("Нет"){_, _ ->
+                // if user press no, then return the activity
+                Toast.makeText(this@MainActivity, "Thank you",
+                    Toast.LENGTH_LONG).show()
+            }
+            setCancelable(true)
+        }.create().show()
+}
 }
 
 
