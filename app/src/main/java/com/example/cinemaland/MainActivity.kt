@@ -84,13 +84,13 @@ class MainActivity : AppCompatActivity() {
 
         recyclerView.addOnScrollListener(object : RecyclerView.OnScrollListener() {
             override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
-                if (layoutManager.findLastVisibleItemPosition() >= movielist.size - 5) {
-                    repeat(10) {
+                if (layoutManager.findLastVisibleItemPosition() >= movielist.size - 3) {
+                    repeat(7) {
                         movielist.add(Movie(R.string.the_green_mile, R.string.dsc_the_green_mile, R.drawable.green_mile, R.drawable.heart,false))
                     }
                     recyclerView.adapter?.notifyItemRangeInserted(
                         movielist.size + 1,
-                        10)
+                        7)
 
 
 
