@@ -13,9 +13,8 @@
         android:layout_height="match_parent"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
         app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
-        tools:itemCount="5"
+        app:spanCount="2"
         tools:listitem="@layout/movie_news" />
-
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

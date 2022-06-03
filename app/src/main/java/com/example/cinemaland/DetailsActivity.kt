@@ -14,14 +14,17 @@ class DetailsActivity : AppCompatActivity() {
 
         val movie = intent.getSerializableExtra("MOVIE_KEY") as Movie
 
+        val imageView = findViewById<ImageView>(androidx.appcompat.R.id.image)
+        imageView.setImageResource(movie.image)
+
+
         val nameView = findViewById<TextView>(R.id.name)
         nameView.text = getString(movie.name)
 
         val descriptionView = findViewById<TextView>(R.id.description)
         descriptionView.text = getString(movie.description)
 
-        val imageView = findViewById<ImageView>(androidx.appcompat.R.id.image)
-        descriptionView.text = getString(movie.image)
+
 
         val btnShare = findViewById<Button>(R.id.btn_share)
         btnShare.setOnClickListener {

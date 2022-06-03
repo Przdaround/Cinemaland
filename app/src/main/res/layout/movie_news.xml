@@ -49,11 +49,11 @@
 
 
     <ImageView
-        android:id="@+id/like"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
+        android:id="@+id/favorite"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
         android:layout_margin="8dp"
-        android:onClick="likeIt"
+        android:src="@drawable/ic_baseline_favorite_border_24"
         app:layout_constraintStart_toEndOf="@id/btn"
         app:layout_constraintBottom_toBottomOf="@id/btn"
 
